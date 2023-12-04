@@ -16,20 +16,17 @@ with open('input.txt') as f:
                 indexes.append({'value': char, 'index': index})
 
         if indexes:
-            first = min(indexes, key=lambda x: x['index'])
-            last = max(indexes, key=lambda x: x['index'])
+            first = min(indexes, key=lambda x: x['index'])['value']
+            last = max(indexes, key=lambda x: x['index'])['value']
 
-            firstChar = first['value']
-            lastChar = last['value']
-
-            if firstChar.isdigit() and lastChar.isdigit():
-                fullNumber = firstChar + lastChar
-            elif not firstChar.isdigit() and lastChar.isdigit():
-                fullNumber = str(strNumbers.index(firstChar) + 1) + lastChar
-            elif firstChar.isdigit() and not lastChar.isdigit():
-                fullNumber = firstChar + str(strNumbers.index(lastChar) + 1)
+            if first.isdigit() and last.isdigit():
+                fullNumber = first + last
+            elif not first.isdigit() and last.isdigit():
+                fullNumber = str(strNumbers.index(first) + 1) + last
+            elif first.isdigit() and not last.isdigit():
+                fullNumber = first + str(strNumbers.index(last) + 1)
             else:
-                fullNumber = str(strNumbers.index(firstChar) + 1) + str(strNumbers.index(lastChar) + 1)
+                fullNumber = str(strNumbers.index(first) + 1) + str(strNumbers.index(last) + 1)
         
             total += int(fullNumber)
 print(total)
