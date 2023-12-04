@@ -1,4 +1,4 @@
-# Open file and read each line
+# Open file and loop through each line
 with open('input.txt') as f:
     result = 0
     for game in f:
