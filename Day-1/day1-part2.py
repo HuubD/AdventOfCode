@@ -3,7 +3,7 @@ import re
 total = 0
 strNumbers = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine']
 
-# Open file and read each line
+# Open file and loop through each line
 with open('input.txt') as f:
     for line in f:
         indexes = []

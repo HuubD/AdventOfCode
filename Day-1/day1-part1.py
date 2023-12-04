@@ -2,7 +2,7 @@ import re
 
 total = 0
 
-# Open file and read each line
+# Open file and loop through each line
 with open('input.txt') as f:
     for line in f:
         numbers = re.findall(r'\d+', line)
