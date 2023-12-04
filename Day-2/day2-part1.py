@@ -1,3 +1,4 @@
+# Open file and read each line
 with open('input.txt') as f:
     idSum = 0
     for game in f:
@@ -7,6 +8,7 @@ with open('input.txt') as f:
 
         gameRounds = game.split(';')
 
+        # Loop through all cubes and check if the count is valid
         for gameRound in gameRounds:
             for cube in gameRound.split(','):
                 cube = cube.strip()
