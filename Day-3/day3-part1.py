@@ -1,5 +1,4 @@
 import re
-import numpy as np
 
 # Check if the position is valid
 def isValidPos(i, j, n, m):
